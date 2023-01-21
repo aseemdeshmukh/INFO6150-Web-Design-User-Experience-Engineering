@@ -9,3 +9,4 @@ Part A- Travel Gateway
 7. <ul>,<li> -This tag is used to specify unordered lists 
 8. <select>,<option>- This tag is used to add drop down options
 9. <footer>- This tag is used to define the footer section of the webpage
+10. <table> - This tag is used to show the table with the cells, columns and rows
