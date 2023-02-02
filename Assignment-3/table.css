@@ -1,0 +1,37 @@
+#mainTable input {
+	margin-left: 5px;
+}
+
+#mainTable {
+	border:2px solid green;
+	border-collapse: collapse;
+	margin: 30px 30px 20px 40px;
+}
+#mainTable td, th {
+	border:1px solid green;
+	padding: 5px;
+}
+#mainTable th {
+	color: #fff;
+	background-color: #a7c942;
+}
+#button {
+	color:#fff;
+	background-color: orange;
+	border-radius: 3px;
+	border:2px solid orange;
+	margin-left: 180px;
+}
+.hidRow {
+	display:none;
+}
+.activate{
+    background-color:yellow;
+}
+.orangeBtn{
+	background-color: orange;
+}
+
+.greyBtn{
+	background-color: lightgrey;
+}

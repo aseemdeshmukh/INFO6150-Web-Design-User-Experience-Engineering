@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+<html>
+
+<head>
+	<title>Table CheckList</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body>
+	<table id="mainTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br />STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+			<th class="toggle">DELETE</th>
+			<th class="toggle">EDIT</th>
+		</tr>
+		<tr class="mainRow">
+			<td><input type="checkbox" onclick='childRec(this)' name="toggle1" /><br /><br /><a
+					id="imageDivLink"></a><img src="down.png" width="25px" onclick="rowShow(this);" /></a></td>
+			<td>Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+			<td class="toggle"><button class="deletebutton" onclick="deleteFn(this)">Delete</button></td>
+			<td class="toggle"><button class="edit" onclick="editFn()">Edit</button></td>
+		</tr>
+		<tr class="hideRow">
+			<td colspan="8">
+				Advisor:<br /><br />
+				Award Details<br />
+				Summer 1-2014(TA)<br />
+				Budget Number: <br />
+				Tuition Number: <br />
+				Comments:<br /><br /><br />
+				Award Status:<br /><br /><br />
+			</td>
+		</tr>
+		
+	</table>
+	<br /><br />
+	<button id="submitButton">SUBMIT SELECTED
+		AWARDS</button>
+	<button id="add" onclick="mainFunction()">Add New Student</button>
+
+	<nav class="socialmediaicons"></nav>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
