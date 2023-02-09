@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback Form</title>
+  <style>
+    label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+  </style>
+
+    
+ </head>
+
+<body id="container">
+    <main>
+        <h2>Feedback Form</h2>
+        <h3>Please provide your feedback</h3>
+        <br><br>
+        <form id="myForm">
+            <h4>Note : Fields marked with an asterisk(*) are mandatory</h4>
+            <label>Title*:</label>
+            <input type="radio" name="title" id="miss" value="miss" required="required" /> Miss
+            <input type="radio" name="title" id="mr" value="mr" required="required" /> Mr.
+            <input type="radio" name="title" id="mrs" value="mrs" required="required" /> Mrs.
+            <br><br>
+
+            <label for="firstName">First Name*:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+            <br><br>
+
+            <div id="error_firstName" style="display: none; color: red;">
+                Invalid First Name, Please enter valid first name
+                <br><br>
+            </div>
+
+            
+            <label for="lastName">Last Name*:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+            <br><br>
+
+            <label for="emailId">Email Id*:</label>
+            <input type="text" name="emailId" id="emailId" placeholder="user@northeastern.edu" required>
+            <br><br>
+
+            <div id="error_emailId" style="display: none; color: red;">
+                Invalid Email address, Please enter valid Email in user@northeastern.edu
+                <br><br>
+            </div>
+
+            <label for="phoneNumber">Phone Number*:</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required />
+            <br><br>
+
+            <div id="error_phoneNumber" style="display: none; color: red;">
+                Invalid phone number, Please enter valid phone number in xxx-xxx-xxxx format
+                <br><br>
+            </div>
+
+            <label for="streetAddress1">Street Address 1*:</label>
+			<input type="text" name="streetAddress1" id="streetAddress1" placeholder="Street Address 1" required/>
+			<br><br>
+
+			<label for="streetAddress2">Street Address 2:</label>
+			<input type="text" name="streetAddress2" id="streetAddress2" placeholder="Street Address 2" />
+			<br><br>
+
+			<label for="city">City*:</label>
+			<input type="text" name="city" id="city" placeholder="City" required/>
+			<br><br>
+
+			<label for="state">State*:</label>
+			<input type="text" name="state" id="state" placeholder="State" required/>
+			<br><br>
+			
+            <label for="zipcode">ZipCode*:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" required/>
+			<br><br>
+
+            <div id="error_zipcode" style="display: none;color: red">
+                Please Enter valid Zip Code. Code entered is wrong
+                <br><br>
+            </div>
+             
+            <label for="zipcode">How did you hear*:</label>
+			<input type='checkbox' name="source" value="facebook" /> Facebook
+            <input type='checkbox' name="source" value="google" /> Google
+            <input type='checkbox' name="source" value="instagram" /> Instagram 
+			<br><br> 
+             
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+			<br><br>
+
+            <div>
+                <label for="drinks">Get your Free Drink today:</label>
+                <select id="drinks" onchange="getDetails(this)">  
+                <option value="0"> Select your option </option>  
+                <option value="1"> Coffee </option>  
+                <option value="2"> Lemonade </option>  
+                <option value="3"> Hot chocolate </option>  
+                <option value="4"> Milkshake </option>
+                <option value="5"> Iced tea </option>  
+              </select>  
+            </div>
+           
+
+            <div id="coffee" style="display:none;">
+                <label for="coffee">Price of coffee:</label>
+                <input type="checkbox" id="cb_coffee" name="drink" value="$2.99" onclick="showQuantity(this)"/>$2.99
+            </div>
+            <div id="lemonade" style="display:none;">
+                <label for="lemonade">Price of lemonade:</label>
+                <input type="checkbox" id="cb_lemonade" name="drink" value="$1.99" onclick="showQuantity(this)"/>$1.99
+            </div>
+            <div id="chocolate" style="display:none;">
+                <label for="chocolate">Price of hot chocolate:</label>
+                <input type="checkbox" id="cb_chocolate" name="drink" value="$4.99" onclick="showQuantity(this)"/>$4.99
+            </div>
+            <div id="milkshake" style="display:none;">
+                <label for="milkshake">Price of milkshake:</label>
+                <input type="checkbox" id="cb_milkshake" name="drink" value="$3.99" onclick="showQuantity(this)"/>$3.99
+            </div>
+            <div id="tea" style="display:none;">
+                <label for="tea">Price of tea:</label>
+                <input type="checkbox" id="cb_tea" name="drink" value="$1.99" onclick="showQuantity(this)"/>$1.99
+            </div>
+            <br><br>
+
+
+            <div id="extraComments" style="display:none;">
+                <label for="extraComments">Extra Comments*:</label>
+                <textarea type="text" id="excom" placeholder="Your comments" rows="5" cols="25" required></textarea>
+            </div>
+			<br><br>
+
+            <input type="Submit" value="Submit Form" id="submit">
+            <input type="Reset">
+            <br><br>
+
+        </form>
+    </main>
+    <br><br>
+    <div id="tab" align="left">
+        <table id="list" cellspacing="3" cellpadding="3" border="1">
+          
+            <tr>
+              <th>Title</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email Id</th>
+              <th>Phone number</th>
+              <th>Street Address 1</th>
+              <th>Street Address 2</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip Code</th>
+              <th>How did you hear?</th>
+              <th>Comments</th>
+              <th>Drink </th>
+              <th>Price</th>
+              <th>Extra Comments</th>
+            </tr>
+          
+        </table>
+        </div>
+    
+
+<script type="text/javascript" src="script.js" ></script>
+
+</body>
+
+</html>
