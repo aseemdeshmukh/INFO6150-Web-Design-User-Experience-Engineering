@@ -1,0 +1,35 @@
+$heading-text-color:white;
+$text-color: black;
+$primary-color: #c4bf58;
+$secondary-color:  #628c4d;
+
+$font:'Roboto', sans-serif;
+$font-heading: "helvetica neue", "Arial", sans-serif;
+
+@function set-text-color($color){
+    @if(lightness($color)>70){
+        @return $heading-text-color;
+    }
+    @else{
+        @return $text-color;
+    }
+}
+
+@mixin set-background($color){
+    background-color: $color;
+    color: set-text-color($color);
+
+}
+
+$amount: (1,2,3,4);
+@each $space in $amount{
+    .stat-#{$space}{
+        margin: 0 30px;
+  text-align: center;
+  width: 800px;
+    }
+
+    .fa {
+        color: $heading-text-color;
+}
+}

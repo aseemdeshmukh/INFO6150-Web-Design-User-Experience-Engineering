@@ -1,0 +1,204 @@
+$space: 1rem;
+
+$gray-100: #f2f2c9;
+$gray-200: #D27D2D;
+$gray-300: #e3e3af;
+$gray-400: #4c7337;
+$gray-500: #969632;
+$gray-600: #628c4d;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+        sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: $gray-600;
+    background-color: $gray-100;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.012em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: $gray-500;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+:focus {
+    outline: 0.125rem solid $gray-500;
+}
+
+.navbar,
+.footer {
+    width: 100%;
+    padding: $space ($space * 0.5);
+    background-color: $gray-200;
+    text-align: center;
+    font-weight: 700;
+}
+
+.body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: ($space * 2) ($space * 2) 0;
+    box-shadow: 0 0 $space rgba(0, 0, 0, 0.03),
+        0 $space ($space * 2) rgba(0, 0, 0, 0.05),
+        0 ($space * 2) ($space * 4) rgba(0, 0, 0, 0.05),
+        0 ($space * 4) ($space * 8) rgba(0, 0, 0, 0.05);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: ($space * 2);
+}
+
+.form-footer {
+    margin: 0 0 $space * 2;
+}
+
+.form-content-header {
+    text-align: center;
+    margin: 0 0 ($space * 2);
+}
+
+.form-content-heading {
+    margin: 0 0 ($space * 0.5);
+}
+
+.form-content-description {
+    font-size: 0.875rem;
+}
+
+.form-field {
+    margin-bottom: $space * 2;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-label {
+    display: inline-block;
+    margin-bottom: $space * 0.25;
+    font-weight: 700;
+    color: $gray-500;
+
+    &[for] {
+        cursor: pointer;
+    }
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    border: 1px solid $gray-300;
+    border-radius: $space * 0.25;
+    padding: ($space * 0.75) $space;
+    color: inherit;
+    font-family: inherit;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    background: $gray-400;
+    color: #fff;
+    border: 0;
+    border-radius: $space * 0.25;
+    padding: ($space * 0.75) $space;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: inherit;
+    margin-bottom: $space * 0.5;
+
+    &:hover,
+    &:focus {
+        background-color: $gray-500;
+    }
+}
+
+.form-submit a {
+    font-size: 0.875rem;
+}
+
+.cta {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: $space * 4;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+    .body {
+        flex-direction: row;
+    }
+
+    .form {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .form-content {
+        width: $space * 26;
+    }
+
+    .cta-content {
+        max-width: 32rem;
+        margin: auto;
+    }
+}
+
+@media (min-width: 72rem) {
+    .formcontent {
+        width: $space * 32;
+        padding: ($space * 4);
+    }
+}
+
