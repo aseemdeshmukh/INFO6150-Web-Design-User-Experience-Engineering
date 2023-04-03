@@ -1,0 +1,29 @@
+{
+  "name": "assignment-8",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://127.0.0.1:5000",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.7.2",
+    "react-router-dom": "^6.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
