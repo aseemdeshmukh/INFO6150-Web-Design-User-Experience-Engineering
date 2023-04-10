@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.wrapper{
+  margin: auto;
+  text-align: center;
+}
+.row{
+  text-align: center;
+  margin: auto;
+}
+
+/* Daily Forecast */
+
+.main-daily{
+  text-align: center;
+}
+
+.daily{
+  margin: auto;
+  width: 33%;
+  height: 100px;
+  display:inline-flex;
+  align-items:stretch;
+  background: linear-gradient(#64cee6, #e4f381);
+  color: rgb(5, 5, 5);
+  opacity: 0.9;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #7d7b7b;
+}
+.left-div{
+  display: flex;
+  width: 15%;
+  margin: auto 0px;
+}
+.left-div a{
+  height: 100%;
+  margin: 0px auto;
+}
+.mid-div{
+  width: 25%;
+  float: left;
+  text-align: left;
+  margin: auto 0px;
+}
+.mid-div h4{
+  margin: 10px auto;
+  font-size: larger;
+  font-weight: bolder;
+}
+.mid-div p{
+  margin: 10px auto;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.right-div{
+  float: right;
+  width: 60%;
+  text-align: right;
+  padding: 0px 10px;
+  margin: auto 0px;
+}
+.right-div .date{
+  margin: 5px auto;
+  font-size: 18px;
+  font-weight: normal;
+}
+.right-div .min-max{
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.right-div .temp{
+  margin: 5px auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hourly Forecast */
+.main-hourly{
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.main-hourly .hourly{
+  display: inline;
+  /* background-image: linear-gradient(70deg, white, rgb(177, 203, 228)); */
+  /* border-radius: 20px; */
+  margin: 5px;
+  padding: 2px;
+  background-color: rgb(158, 145, 145);
+  color: rgb(0, 0, 0);
+  opacity: 0.7;
+
+}
+.hourly{
+  width: 70%;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px){
+  .daily{
+    width: 90%;
+  }
+  .main-hourly{
+    width: 85%;
+  }
+  .main-hourly .hourly{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 325px) {
+  .main-hourly{
+    width: 90%;
+
+  }
+  .main-hourly .hourly{
+    margin: 2px;
+  }
+  .daily{
+    width: 90%;
+  }
+  .daily .mid-div h4{
+    font-size: small;
+  }
+  .daily .mid-div p{
+    font-size: large;
+  }
+  .daily .right-div .date{
+    font-size: small;
+  }
+  .main-hourly .hourly{
+    width: 90%;
+  }
+
+}
+@media screen and (max-width: 320px){
+  .main-hourly{
+    width: 95%;
+
+  }
+  .main-hourly .hourly{
+    margin: 1px;
+  }
+  .main-hourly .hourly p{
+    font-size: 10px;
+  }
+  .daily{
+    width: 95%;
+  }
+  .daily .mid-div h4{
+    font-size: small;
+  }
+  .daily .mid-div p{
+    font-size: large;
+  }
+  .daily .right-div .date{
+    font-size: small;
+  }
+  .main-hourly .hourly{
+    width: 90%;
+  }
+  
+
+}
